@@ -20,6 +20,13 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->string('sex')->nullable();
+            $table->string('Possession_of_supporters_seat')->nullable(); //yes or not
+            $table->date('date_of_birth')->nullable();
+            $table->string('image')->nullable();
+            $table->biginteger('player_id')->unsigned()->nullable(); 
+            $table->string('before_colona_place')->nullable();
+            $table->string('after_colona_place')->nullable();
             $table->timestamps();
         });
     }
